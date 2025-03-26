@@ -5,7 +5,6 @@ import {
   FaCheck,
   FaLink,
   FaPen,
-  FaPlus,
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
