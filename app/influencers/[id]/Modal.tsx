@@ -48,10 +48,7 @@ const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
   );
 
   const [about, setAbout] = useState(data?.content || "");
-  const [serviceTitle, setServiceTitle] = useState(data?.title || "");
-  const [serviceDescription, setServiceDescription] = useState(
-    data?.description || ""
-  );
+
 
   const handleCheckboxChange = (language?: string, niche?: string) => {
     if (language) {
@@ -141,10 +138,6 @@ const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
     } else if (section === "Services") {
       console.log(
         type === "edit" ? "Updating Service..." : "Adding Service...",
-        {
-          title: serviceTitle,
-          description: serviceDescription,
-        }
       );
     } else if (section === "About") {
       console.log("Updating About...", about);
