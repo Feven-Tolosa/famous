@@ -2,19 +2,26 @@ import { useState } from "react";
 
 interface ModalProps {
   type: "edit" | "add";
-  section:
-    | "Languages"
-    | "Services"
-    | "About"
-    | "Portfolio"
-    | "Niches"
-    | "Social media";
-  data?: any;
+  section: "Languages" | "Services" | "About" | "Portfolio" | "Niches" | "Social media";
+  data?: {
+    content?: string | string[] | Service[] | SocialMedia[];
+  };
   onClose: () => void;
 }
 
+interface Service {
+  name: string;
+  fee: string;
+}
+
+interface SocialMedia {
+  icon: string;
+  platform: string;
+  link: string;
+}
+
 const languages = ["English", "Spanish", "French", "Oromo", "Amharic", "Afar"];
-const niches: string[] = [
+const niches = [
   "Fashion",
   "Travel",
   "Food",
@@ -24,31 +31,21 @@ const niches: string[] = [
   "Lifestyle",
   "Gaming",
 ];
-interface Service {
-  name: string;
-  fee: string;
-}
-interface SocialMedia {
-  icon: string;
-  platform: string;
-  link: string;
-}
+
 const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>(
-    Array.isArray(data?.content) ? data.content : []
+    Array.isArray(data?.content) && typeof data.content[0] === "string" ? (data.content as string[]) : []
   );
   const [selectedNiches, setSelectedNiches] = useState<string[]>(
-    Array.isArray(data?.content) ? data.content : []
+    Array.isArray(data?.content) && typeof data.content[0] === "string" ? (data.content as string[]) : []
   );
   const [services, setServices] = useState<Service[]>(
-    Array.isArray(data?.content) ? data.content : []
+    Array.isArray(data?.content) && typeof data.content[0] === "object" ? (data.content as Service[]) : []
   );
   const [socialMedia, setSocialMedia] = useState<SocialMedia[]>(
-    Array.isArray(data?.content) ? data.content : []
+    Array.isArray(data?.content) && typeof data.content[0] === "object" ? (data.content as SocialMedia[]) : []
   );
-
-  const [about, setAbout] = useState(data?.content || "");
-
+  const [about, setAbout] = useState<string>(typeof data?.content === "string" ? data.content : "");
 
   const handleCheckboxChange = (language?: string, niche?: string) => {
     if (language) {
@@ -68,32 +65,18 @@ const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
     }
   };
 
-  // Separate languages into checked and unchecked
-  const checkedLanguages = languages.filter((lang) =>
-    selectedLanguages.includes(lang)
-  );
-  const uncheckedLanguages = languages.filter(
-    (lang) => !selectedLanguages.includes(lang)
-  );
-
-  // Separate niches into checked and unchecked
-  const checkedNiches = niches.filter((niche) =>
-    selectedNiches.includes(niche)
-  );
-  const uncheckedNiches = niches.filter(
-    (niche) => !selectedNiches.includes(niche)
-  );
   const addService = () => {
     setServices([...services, { name: "", fee: "" }]);
   };
+
   const addLink = () => {
     setSocialMedia([...socialMedia, { platform: "", link: "", icon: "" }]);
   };
-  
 
   const removeService = (index: number) => {
     setServices(services.filter((_, i) => i !== index));
   };
+
   const removeLink = (index: number) => {
     setSocialMedia(socialMedia.filter((_, i) => i !== index));
   };
@@ -107,21 +90,20 @@ const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
       const updatedServices = [...services];
       updatedServices[index] = {
         ...updatedServices[index],
-        [field]: value, // Explicitly assert type
-      } as Service;
+        [field]: value,
+      };
       setServices(updatedServices);
     }
-  
+
     if (section === "Social media") {
       const updatedSocialMedia = [...socialMedia];
       updatedSocialMedia[index] = {
         ...updatedSocialMedia[index],
-        [field]: value, // Explicitly assert type
-      } as SocialMedia;
+        [field]: value,
+      };
       setSocialMedia(updatedSocialMedia);
     }
   };
-  
 
   const handleSave = () => {
     console.log("Saving...");
@@ -138,12 +120,18 @@ const Modal: React.FC<ModalProps> = ({ type, section, data, onClose }) => {
     } else if (section === "Services") {
       console.log(
         type === "edit" ? "Updating Service..." : "Adding Service...",
+        services
       );
     } else if (section === "About") {
       console.log("Updating About...", about);
     }
     onClose();
   };
+
+  const checkedLanguages = languages.filter((lang) => selectedLanguages.includes(lang));
+  const uncheckedLanguages = languages.filter((lang) => !selectedLanguages.includes(lang));
+  const checkedNiches = niches.filter((niche) => selectedNiches.includes(niche));
+  const uncheckedNiches = niches.filter((niche) => !selectedNiches.includes(niche));
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center  z-40">
