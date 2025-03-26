@@ -100,7 +100,7 @@ export default function JobsPage() {
       {/* Filters Section */}
       <div className='mb-20 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center justify-center'>
         <div className='w-full md:w-auto'>
-          <select
+          <select title='niche'
             name='niche'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -112,7 +112,7 @@ export default function JobsPage() {
           </select>
         </div>
         <div className='w-full md:w-auto'>
-          <select
+          <select title='language'
             name='language'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -123,7 +123,7 @@ export default function JobsPage() {
           </select>
         </div>
         <div className='w-full md:w-auto'>
-          <select
+          <select title='price'
             name='price'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'

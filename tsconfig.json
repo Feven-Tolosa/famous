@@ -24,6 +24,6 @@
     },
     "forceConsistentCasingInFileNames": true // Add this line
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/influencers/[id]/page.jsx", "app/influencers/[id]/Modal.jsx"],
   "exclude": ["node_modules"]
 }
