@@ -51,7 +51,7 @@ export default function StepFour() {
             key={index}
             className="border border-secondary p-3 rounded-lg bg-background mb-4"
           >
-            <input
+            <input placeholder="file"
               type="file"
               accept="image/*,video/*"
               className=" p-2 w-full rounded-lg text-white outline-none bg-slate-700"

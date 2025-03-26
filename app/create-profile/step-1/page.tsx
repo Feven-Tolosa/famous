@@ -34,7 +34,7 @@ export default function StepOne() {
           <label className="block font-semibold mb-1 text-white">
             Full Name
           </label>
-          <input
+          <input placeholder="Full Name"
             type="text"
             className="text-white bg-slate-700 p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             required
@@ -43,7 +43,7 @@ export default function StepOne() {
 
         <div className="flex flex-col md:flex-row gap-3 ">
           <label className="block font-semibold mb-1 text-white">City</label>
-          <input
+          <input placeholder="city"
             type="text"
             className="text-white bg-slate-700 p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={location.city}
@@ -53,7 +53,7 @@ export default function StepOne() {
         </div>
         <div className="flex flex-col md:flex-row gap-3 ">
           <label className="block font-semibold mb-1 text-white">Country</label>
-          <input
+          <input placeholder="country"
             type="text"
             className="text-white bg-slate-700 p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={location.country}
@@ -79,7 +79,7 @@ export default function StepOne() {
         </div>
         <div className="flex flex-col md:flex-row gap-3 ">
           <label className="block font-semibold mb-1 text-white">Email</label>
-          <input
+          <input placeholder="email"
             type="email"
             className="text-white bg-slate-700 p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={email}
@@ -91,7 +91,7 @@ export default function StepOne() {
           <label className="block font-semibold mb-1 text-white">
             About You
           </label>
-          <textarea
+          <textarea title="about"
             className="text-white bg-slate-700 p-3 flex-1 w-full h-40 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={bio}
             onChange={(e) => setBio(e.target.value)}

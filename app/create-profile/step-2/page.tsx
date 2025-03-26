@@ -61,7 +61,7 @@ export default function StepTwo() {
           <label className="block font-semibold mb-1">
             Social Media Platform
           </label>
-          <select
+          <select title="platform"
             className=" p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 text-white outline-none bg-slate-700"
             value={platform}
             onChange={(e) => setPlatform(e.target.value)}
@@ -78,7 +78,7 @@ export default function StepTwo() {
         </div>
         <div className="flex flex-col md:flex-row gap-3 ">
           <label className="block font-semibold mb-1">Profile Link</label>
-          <input
+          <input placeholder="url"
             type="url"
             className=" p-3 flex-1 rounded-lg focus:ring-2 focus:ring-blue-500 text-white outline-none bg-slate-700"
             value={link}

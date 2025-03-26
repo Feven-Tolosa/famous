@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaFacebook, FaTwitter, FaInstagram, FaSearch } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const influencers = [
   {
@@ -269,7 +270,7 @@ const FindInfluencer = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button
+            <button title="search"
               className="absolute right-0 rounded-r-full w-10   top-0 bottom-0 p-2 text-white bg-primary"
               onClick={handleSearch}
             >
@@ -291,7 +292,7 @@ const FindInfluencer = () => {
               showFilters ? "block" : "hidden"
             } md:flex`}
           >
-            <select
+            <select title="category"
               className="p-2  rounded-md w-full sm:w-auto bg-slate-700 outline-none"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -305,7 +306,7 @@ const FindInfluencer = () => {
                 </option>
               ))}
             </select>
-            <select
+            <select title="location"
               className="p-2  rounded-md w-full sm:w-auto bg-slate-700 outline-none"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
@@ -319,7 +320,7 @@ const FindInfluencer = () => {
                 )
               )}
             </select>
-            <select
+            <select title="language"
               className="p-2  rounded-md w-full sm:w-auto bg-slate-700 outline-none"
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
@@ -370,27 +371,27 @@ const FindInfluencer = () => {
                   Rating: ⭐ {influencer.rating}
                 </p>
                 <div className="flex justify-evenly items-center gap-4 mt-2">
-                  <a
+                  <Link
                     href={influencer.socials.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaFacebook className="text-blue-600 text-xl" />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={influencer.socials.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaTwitter className="text-blue-400 text-xl" />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={influencer.socials.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram className="text-pink-500 text-xl" />
-                  </a>
+                  </Link>
                 </div>
                 <button
                   className="mt-4 p-2 bg-secondary hover:bg-primary transition-all duration-300  text-white rounded-md"

@@ -23,6 +23,12 @@ export default function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
+  const isDashboardRoute = pathname.startsWith("/dashboard");
+
+  if (isDashboardRoute) {
+    return null; // Do not render the header if on a dashboard route
+  }
+
   return (
     <>
       <nav className="w-screen shadow-md z-50 bg-background fixed top-0 left-0 right-0">
