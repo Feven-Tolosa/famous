@@ -3,86 +3,214 @@ import { FaCheck } from 'react-icons/fa';
 
 export default function PricingPage() {
   return (
-    <div className='mx-auto max-w-7xl px-6 py-8 md:py-12 lg:px-8'>
-      {/* Pricing Section */}
-      <section>
-        <div className="container mx-auto p-8">
-          <h1 className="text-4xl font-bold text-white text-center mb-6">Pricing Plans</h1>
-          <p className="text-white text-center mb-8">Connecting Brands with Influencers, One Story at a Time</p>
+    <div className="min-h-screen bg-slate-900 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-3">Simple, transparent pricing</h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            Connect with your audience through authentic influencer partnerships
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {/* Single-Language Package */}
-          <div className=" bg-slate-800 border border-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between text-left">
-            <h3 className="text-2xl font-semibold text-white text-center mb-2">Single-Language</h3>
-            <p className="text-gray-400 mb-4">Perfect for brands starting their journey in social media, focusing on one language.</p>
-            <ul className="text-lg  border-b border-slate-900 border-t p-2 text-gray-200 space-y-1 mb-4">
-              <li><FaCheck className="inline text-green-500" /> 1 Language Content</li>
-              <li><FaCheck className="inline text-green-500" /> 1 Graphic/Post</li>
-              <li><FaCheck className="inline text-green-500" /> Weekly Posts</li>
-            </ul>
-            <p className="text-xl text-gray-100">3,000 ETB/mo</p>
+
+        {/* Pricing Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Single-Language */}
+          <div className="bg-slate-800 rounded-xl shadow-sm border border-slate-700 overflow-hidden hover:shadow-md transition-shadow">
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-white mb-1">Single-Language</h3>
+              <p className="text-slate-400 text-sm mb-4">Ideal for brands focusing on one language</p>
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-white">3,000</span>
+                <span className="text-slate-400 ml-1">ETB/mo</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">1 Language Content</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">1 Graphic/Post</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Weekly Posts</span>
+                </li>
+              </ul>
+            </div>
+            <div className="px-6 pb-6">
+              <button className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                Get started
+              </button>
+            </div>
           </div>
 
-          {/* Multi-Language Package */}
-          <div className=" bg-slate-800 border border-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between text-left">
-            <h3 className="text-2xl font-semibold text-white text-center mb-2">Multi-Language</h3>
-            <p className="text-gray-400 mb-4">Ideal for expanding your brand’s reach across multiple languages.</p>
-            <ul className="text-lg  border-b border-slate-900 border-t p-2 text-gray-200 space-y-1 mb-4">
-              <li><FaCheck className="inline text-green-500" /> 3+ Language Content</li>
-              <li><FaCheck className="inline text-green-500" /> 1 Graphic/Post</li>
-              <li><FaCheck className="inline text-green-500" /> Bi-Weekly Posts</li>
-            </ul>
-            <p className="text-xl text-gray-100">5,000 ETB/mo</p>
+          {/* Multi-Language */}
+          <div className="bg-slate-800 rounded-xl shadow-sm border border-slate-700 overflow-hidden hover:shadow-md transition-shadow">
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-white mb-1">Multi-Language</h3>
+              <p className="text-slate-400 text-sm mb-4">Expand your reach across languages</p>
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-white">5,000</span>
+                <span className="text-slate-400 ml-1">ETB/mo</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">3+ Language Content</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">1 Graphic/Post</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Bi-Weekly Posts</span>
+                </li>
+              </ul>
+            </div>
+            <div className="px-6 pb-6">
+              <button className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                Get started
+              </button>
+            </div>
           </div>
 
           {/* Basic Package */}
-          <div className=" bg-slate-800 border border-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between text-left">
-            <h3 className="text-2xl font-semibold text-white text-center mb-2">Basic Package</h3>
-            <p className="text-gray-400 mb-4">Great for brands needing regular content and community interaction.</p>
-            <ul className="text-lg  border-b border-slate-900 border-t p-2 text-gray-200 space-y-1 mb-4">
-              <li><FaCheck className="inline text-green-500" /> 3 Weekly Posts</li>
-              <li><FaCheck className="inline text-green-500" /> Basic Analytics</li>
-              <li><FaCheck className="inline text-green-500" /> Community Management</li>
-              <li><FaCheck className="inline text-green-500" /> 2 TikTok Videos</li>
-            </ul>
-            <p className="text-xl text-gray-100">8,000 ETB/mo</p>
+          <div className="bg-slate-800 rounded-xl shadow-sm border border-slate-700 overflow-hidden hover:shadow-md transition-shadow">
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-white mb-1">Basic Package</h3>
+              <p className="text-slate-400 text-sm mb-4">Regular content with community interaction</p>
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-white">8,000</span>
+                <span className="text-slate-400 ml-1">ETB/mo</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">3 Weekly Posts</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Basic Analytics</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Community Management</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">2 TikTok Videos</span>
+                </li>
+              </ul>
+            </div>
+            <div className="px-6 pb-6">
+              <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                Popular choice
+              </button>
+            </div>
           </div>
 
           {/* Standard Package */}
-          <div className=" bg-slate-800 border border-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between text-left">
-            <h3 className="text-2xl font-semibold text-white text-center mb-2">Standard Package</h3>
-            <p className="text-gray-400 mb-4">Designed for brands looking for comprehensive engagement and analytics.</p>
-            <ul className="text-lg  border-b border-slate-900 border-t p-2 text-gray-200 space-y-1 mb-4">
-              <li><FaCheck className="inline text-green-500" /> 4 Weekly Posts</li>
-              <li><FaCheck className="inline text-green-500" /> Monthly Reports</li>
-              <li><FaCheck className="inline text-green-500" /> Engagement Strategies</li>
-              <li><FaCheck className="inline text-green-500" /> 4 TikTok Videos</li>
-            </ul>
-            <p className="text-xl text-gray-100">18,000 ETB/mo</p>
+          <div className="bg-slate-800 rounded-xl shadow-sm border border-slate-700 overflow-hidden hover:shadow-md transition-shadow">
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-white mb-1">Standard Package</h3>
+              <p className="text-slate-400 text-sm mb-4">Comprehensive engagement & analytics</p>
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-white">18,000</span>
+                <span className="text-slate-400 ml-1">ETB/mo</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">4 Weekly Posts</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Monthly Reports</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Engagement Strategies</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">4 TikTok Videos</span>
+                </li>
+              </ul>
+            </div>
+            <div className="px-6 pb-6">
+              <button className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                Get started
+              </button>
+            </div>
           </div>
 
           {/* Premium Package */}
-          <div className=" bg-slate-800 border border-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between text-left">
-            <h3 className="text-2xl font-semibold text-white text-center mb-2">Premium Package</h3>
-            <p className="text-gray-400 mb-4">The ultimate solution for brands seeking full-service management and support.</p>
-            <ul className="text-lg  border-b border-slate-900 border-t p-2 text-gray-200 space-y-1 mb-4">
-              <li><FaCheck className="inline text-green-500" /> 5 Weekly Posts</li>
-              <li><FaCheck className="inline text-green-500" /> Ad Campaign Management</li>
-              <li><FaCheck className="inline text-green-500" /> Weekly Analytics</li>
-              <li><FaCheck className="inline text-green-500" /> 24/7 Support</li>
-              <li><FaCheck className="inline text-green-500" /> 8 TikTok Videos</li>
-            </ul>
-            <p className="text-xl text-gray-100">25,000 ETB/mo</p>
+          <div className="bg-slate-800 rounded-xl shadow-md border-2 border-indigo-900 overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="p-6">
+              <div className="flex justify-between items-start">
+                <h3 className="text-lg font-semibold text-white mb-1">Premium Package</h3>
+                <span className="bg-indigo-900 text-indigo-200 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                  Recommended
+                </span>
+              </div>
+              <p className="text-slate-400 text-sm mb-4">Full-service management & support</p>
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-white">25,000</span>
+                <span className="text-slate-400 ml-1">ETB/mo</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">5 Weekly Posts</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Ad Campaign Management</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">Weekly Analytics</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">24/7 Support</span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <span className="text-slate-300">8 TikTok Videos</span>
+                </li>
+              </ul>
+            </div>
+            <div className="px-6 pb-6">
+              <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                Get started
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Call to Action Button */}
-        <div className="text-center mt-8">
-          <a href="#contact" className="bg-secondary hover:bg-secondary/70 text-slate-900 font-bold py-3 px-6 rounded-lg">
-            Get Started Today!
-          </a>
+        {/* FAQ Section */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Frequently asked questions</h2>
+          <div className="space-y-4">
+            <div className="bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-700">
+              <h3 className="font-medium text-white">Can I change plans later?</h3>
+              <p className="mt-1 text-slate-400 text-sm">Yes, you can upgrade or downgrade your plan at any time.</p>
+            </div>
+            <div className="bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-700">
+              <h3 className="font-medium text-white">Is there a contract?</h3>
+              <p className="mt-1 text-slate-400 text-sm">No, our plans are month-to-month with no long-term commitment.</p>
+            </div>
+            <div className="bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-700">
+              <h3 className="font-medium text-white">Do you offer custom plans?</h3>
+              <p className="mt-1 text-slate-400 text-sm">Yes, contact us to discuss your specific needs.</p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
