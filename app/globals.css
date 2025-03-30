@@ -64,6 +64,11 @@ body {
     background-size: cover;
     background-position: center;
   }
+  .serviceBackground {
+    background-image: url("/service1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 
   /* ✅ Grid for Features */
   .feature-grid {
