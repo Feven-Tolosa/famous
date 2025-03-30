@@ -7,7 +7,7 @@ export default function PricingPage() {
       {/* Pricing Section */}
       <section>
         <div className="container mx-auto p-8">
-          <h1 className="text-4xl font-bold text-white text-center mb-6">Pricing <span className='text-primary'> Plans</span> </h1>
+          <h1 className="text-4xl font-bold text-white text-center mb-6">Pricing Plans</h1>
           <p className="text-white text-center mb-8">Connecting Brands with Influencers, One Story at a Time</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
@@ -78,7 +78,7 @@ export default function PricingPage() {
 
         {/* Call to Action Button */}
         <div className="text-center mt-8">
-          <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+          <a href="#contact" className="bg-secondary hover:bg-secondary/70 text-slate-900 font-bold py-3 px-6 rounded-lg">
             Get Started Today!
           </a>
         </div>
