@@ -66,7 +66,7 @@ export default function JobsPage() {
   }
 
   return (
-    <div className='min-h-screen bg-slate-800 p-6'>
+    <div className='min-h-screen bg-slate-700 p-6'>
       <h1 className='text-3xl font-bold text-center mb-12'>Influencer Jobs</h1>
 
       {/* Search Input with Icon */}
@@ -100,7 +100,8 @@ export default function JobsPage() {
       {/* Filters Section */}
       <div className='mb-20 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center justify-center'>
         <div className='w-full md:w-auto'>
-          <select title='niche'
+          <select
+            title='niche'
             name='niche'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -112,7 +113,8 @@ export default function JobsPage() {
           </select>
         </div>
         <div className='w-full md:w-auto'>
-          <select title='language'
+          <select
+            title='language'
             name='language'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -123,7 +125,8 @@ export default function JobsPage() {
           </select>
         </div>
         <div className='w-full md:w-auto'>
-          <select title='price'
+          <select
+            title='price'
             name='price'
             onChange={handleFilterChange}
             className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -139,7 +142,7 @@ export default function JobsPage() {
       {/* Job Cards Section */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {filteredJobs.map((job) => (
-          <div key={job.id} className='bg-borderColor p-6 rounded-lg shadow-md'>
+          <div key={job.id} className='bg-slate-600 p-6 rounded-lg shadow-md'>
             <h2 className='text-xl font-bold mb-2'>{job.companyName}</h2>
             <p className='text-blue-100 mb-4'>{job.description}</p>
             <div className='flex space-x-4 text-sm text-textPrimary mb-4'>
