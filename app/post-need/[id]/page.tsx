@@ -57,9 +57,9 @@ export default function JobDetailsPage() {
   }
 
   return (
-    <div className='bg-slate-800'>
+    <div className='bg-slate-900'>
       <h1 className='text-3xl font-bold text-center  p-8'>Job Details</h1>
-      <div className='min-h-screen bg-slate-700 p-6 text-white'>
+      <div className='min-h-screen bg-slate-900 p-6 text-white'>
         {/* Job Details Section */}
         <div className='bg-slate-800 p-6 rounded-lg shadow-md mb-8'>
           <h2 className='text-2xl font-bold mb-4'>{job.companyName}</h2>
@@ -110,7 +110,7 @@ export default function JobDetailsPage() {
                 id='proposal'
                 value={proposal}
                 onChange={(e) => setProposal(e.target.value)}
-                className='w-full p-2 border rounded text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary'
+                className='w-full p-2 border rounded text-white bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary'
                 rows={6}
                 placeholder='Explain why you are the best fit for this job...'
                 required

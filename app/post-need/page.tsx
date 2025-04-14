@@ -66,7 +66,7 @@ export default function JobsPage() {
   }
 
   return (
-    <div className='min-h-screen bg-slate-700 p-6'>
+    <div className='min-h-screen bg-slate-900  p-6'>
       <h1 className='text-3xl font-bold text-center mb-12'>Influencer Jobs</h1>
 
       {/* Search Input with Icon */}
@@ -104,7 +104,7 @@ export default function JobsPage() {
             title='niche'
             name='niche'
             onChange={handleFilterChange}
-            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-800'
           >
             <option value=''>Filter by Niche</option>
             <option value='Technology'>Technology</option>
@@ -117,7 +117,7 @@ export default function JobsPage() {
             title='language'
             name='language'
             onChange={handleFilterChange}
-            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-800'
           >
             <option value=''>Filter by Language</option>
             <option value='English'>English</option>
@@ -129,7 +129,7 @@ export default function JobsPage() {
             title='price'
             name='price'
             onChange={handleFilterChange}
-            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            className='w-full md:w-48 p-2 border rounded text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-800'
           >
             <option value=''>Filter by Price</option>
             <option value='500'>$500</option>
@@ -142,7 +142,7 @@ export default function JobsPage() {
       {/* Job Cards Section */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {filteredJobs.map((job) => (
-          <div key={job.id} className='bg-slate-600 p-6 rounded-lg shadow-md'>
+          <div key={job.id} className='bg-slate-800 p-6 rounded-lg shadow-md'>
             <h2 className='text-xl font-bold mb-2'>{job.companyName}</h2>
             <p className='text-blue-100 mb-4'>{job.description}</p>
             <div className='flex space-x-4 text-sm text-textPrimary mb-4'>
