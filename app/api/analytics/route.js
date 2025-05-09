@@ -1,11 +1,13 @@
 // app/api/analytics/route.js
 import { NextResponse } from 'next/server'
-import Analytics from '@/models/Analytics'
-import { connectDB } from '@/lib/db'
+import Analytics from '../../models/Analytics'
+import { connectDB } from '../../lib/db' // Adjusted path (no extra `../`)
 import { getCachedData, setCachedData } from './utils/cache'
 
 // Connect to DB
 await connectDB()
+
+// Rest of your code...
 
 // Fetch analytics for a specific influencer
 export async function GET(request) {
